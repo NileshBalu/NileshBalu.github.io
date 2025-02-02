@@ -1,17 +1,20 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
+
+# Plugins
+plugins:
+  - jekyll-gist
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            "Nilesh Balu"
 tagline:          'Personal Webpage'
 description:      'Overview of my academic journey'
 url:              "http://NileshBalu.github.io"
-baseurl:          /
+baseurl:          "/"
 
 author:
   name:           'Nilesh Balu'
