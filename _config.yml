@@ -7,10 +7,10 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Nilesh Balu
+title:            "Nilesh Balu"
 tagline:          'Personal Webpage'
 description:      'Overview of my academic journey'
-url:              http://NileshBalu.github.io
+url:              "http://NileshBalu.github.io"
 baseurl:          /
 
 author:
