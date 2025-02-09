@@ -6,11 +6,12 @@ highlighter:      pygments
 plugins:
   - jekyll-gist
   - jekyll-paginate
-  
+
 
 
 # Permalinks
-permalink:        pretty
+permalink: /:categories/:title/
+
 
 # Setup
 title:            "Nilesh Balu"
