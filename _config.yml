@@ -6,11 +6,11 @@ highlighter:      pygments
 plugins:
   - jekyll-gist
 
-include:
-  - _plugins
-  - _projects
-  - public
-  - images
+# include:
+#   - _plugins
+#   - _projects
+#   - public
+#   - images
 
 # Permalinks
 permalink:        pretty
