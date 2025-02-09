@@ -1,0 +1,41 @@
+---
+layout: page
+title: Projects
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }} | Nilesh Balu</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <p>Here is a list of projects I have worked on.</p>
+  </header>
+
+    <div class="projects-list">
+      {% for project in site.projects %}
+      <div class="project-item">
+        <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+        <a href="{{ project.url }}">
+          <img src="{{ project.image }}" alt="{{ project.title }}" width="50%">
+        </a>
+        <p>{{ project.description }}</p>
+        <p><strong>Type:</strong> {{ project.type }}</p>
+        <p><strong>Location:</strong> {{ project.location }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Add more projects here -->
+  </section>
+
+  <footer>
+    <p>Website by Nilesh Balu</p>
+  </footer>
+</body>
+</html>

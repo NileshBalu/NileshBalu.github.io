@@ -11,8 +11,8 @@ permalink:        pretty
 
 # Setup
 title:            "Nilesh Balu"
-tagline:          'Personal Webpage'
-description:      'Overview of my academic journey'
+tagline:          ""
+description:      ""
 url:              "http://NileshBalu.github.io"
 baseurl:          "/"
 
@@ -21,6 +21,11 @@ author:
   url:            
 
 paginate:         5
+
+collections:
+  projects:
+    output:       true
+    permalink:    /projects/:path/
 
 # Custom vars
 version:          2.1.0
