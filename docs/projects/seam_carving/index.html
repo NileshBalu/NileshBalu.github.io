@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Seam Carving - A Parallel Implementation &middot; Nilesh Balu
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Nilesh Balu
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde/archive/v2.1.0.zip">Download</a>
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Seam Carving - A Parallel Implementation</h1>
+  <p><img src="/images/seam_carving.png" alt="Seam Carving - A Parallel Implementation" />
+<strong>Aim:</strong></p>
+
+<p>Implement the seam carving operation from scratch using the <em>OpenMP</em>, <em>MPI</em> and <em>OpenACC</em> frameworks and compare their performance.</p>
+
+<p><strong>Summary:</strong></p>
+
+<p>Seam Carving is an image operator that dynamically adjusts image dimensions by considering the contents of the image. The algorithm involves</p>
+<ul>
+  <li>the calculation of the gradient-based energy of the image</li>
+  <li>the removal of 8-connected paths of low-energy pixels, called seams.</li>
+</ul>
+
+<p>At the end of this operation, the key features of the image are still preserved. Seam carving operates linearly in the number of pixels, making resizing linear in the number of seams to be removed or inserted.</p>
+
+<p>Real-time computation of seams is time-consuming. To address this, we propose a parallel implementation of the algorithm, focusing on phases that involve independent computations for each pixel and seam, viz., the energy calculation and seam identification phases. To this end, we demonstrate the parallelism using OpenMP, MPI, and OpenACC frameworks and compare their performance. Additionally, we utilize this algorithm as an object removal tool that removes a set of pixels selected by the user, ensuring minimal distortion of the image.</p>
+
+<p><a href="/attachments/ID5130_Project.pdf" target="_blank">Read Report</a></p>
+
+
+</div>
+
+    </div>
+
+  </body>
+</html>
