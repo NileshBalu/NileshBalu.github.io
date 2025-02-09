@@ -5,12 +5,9 @@ highlighter:      pygments
 # Plugins
 plugins:
   - jekyll-gist
+  - jekyll-paginate
+  
 
-# include:
-#   - _plugins
-#   - _projects
-#   - public
-#   - images
 
 # Permalinks
 permalink:        pretty
