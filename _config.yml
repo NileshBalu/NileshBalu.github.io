@@ -6,6 +6,12 @@ highlighter:      pygments
 plugins:
   - jekyll-gist
 
+include:
+  - _plugins
+  - _projects
+  - public
+  - images
+
 # Permalinks
 permalink:        pretty
 
@@ -13,7 +19,7 @@ permalink:        pretty
 title:            "Nilesh Balu"
 tagline:          ""
 description:      ""
-url:              "http://NileshBalu.github.io"
+url:              "http://nileshbalu.github.io"
 baseurl:          "/"
 
 author:
