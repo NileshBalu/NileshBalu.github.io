@@ -1,37 +1,28 @@
----
-layout: page
-title: "Model Predictive Control for the 4 Tank Problem"
-image: "/images/tank.png"
-description: "A Model Predictive Controller to control the heights of liquid in the 4-tank setting."
-location: "Indian Institute of Technology Madras, India"
-type: "Course Project: Modern Control Theory"
-attachments:
-  - link: "/attachments/CH5120_1.pdf"
-    text: "Comparing Kalman and Particle Filters"
-  - link: "/attachments/CH5120_2.pdf"
-    text: "MPC using Kalman Filter"
----
-![{{page.title}}]({{page.image}})
-**Aim:** 
+I"î<p><img src="/images/tank.png" alt="Model Predictive Control for the 4 Tank Problem" />
+<strong>Aim:</strong></p>
 
-Write a Model Predictive Controller to control the heights of the tanks in the 4 tank system.
+<p>Write a Model Predictive Controller to control the heights of the tanks in the 4 tank system.</p>
 
-**Summary:**
+<p><strong>Summary:</strong></p>
 
-Used Matlab to implement Model Predictive Control. Used a Kalman Filter and a Particle Filter for state estimation, and compared their performance. Simulated scenarios with different measured variables, control variables and constraints on the input and the output.
+<p>Used Matlab to implement Model Predictive Control. Used a Kalman Filter and a Particle Filter for state estimation, and compared their performance. Simulated scenarios with different measured variables, control variables and constraints on the input and the output.</p>
 
-**Attachments:**
-
+<p><strong>Attachments:</strong></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
-  {% for attachment in page.attachments %}
+  
     <div class="pdf-thumbnail-wrapper">
-      <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      <a href="{{ attachment.link }}" target="_blank">{{ attachment.text }}</a>
+      <canvas class="pdf-thumbnail" data-url="/attachments/CH5120_1.pdf"></canvas>
+      <a href="/attachments/CH5120_1.pdf" target="_blank">Comparing Kalman and Particle Filters</a>
     </div>
-  {% endfor %}
+  
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/CH5120_2.pdf"></canvas>
+      <a href="/attachments/CH5120_2.pdf" target="_blank">MPC using Kalman Filter</a>
+    </div>
+  
 </div>
 
 <script>
@@ -68,3 +59,5 @@ Used Matlab to implement Model Predictive Control. Used a Kalman Filter and a Pa
     });
   });
 </script>
+
+:ET
