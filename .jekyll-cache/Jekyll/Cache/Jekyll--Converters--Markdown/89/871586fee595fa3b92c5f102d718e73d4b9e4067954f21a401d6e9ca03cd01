@@ -1,35 +1,25 @@
----
-layout: page
-title: "Autonomous Electric Wheelchair for Children with Physical Challenges"
-image: "/images/wheelchair.png"
-description: "Implemented mapping and autonomous driving on an electric wheelchair."
-location: "Ontario Tech University, Canada"
-type: "Mitacs Global Research Internship"
-attachments:
-  - link: "/attachments/Internship_Report.pdf"
-    text: "Read Report"
----
-![{{page.title}}]({{page.image}})
-**Aim:** 
+I"Ö<p><img src="/images/seam_carving.png" alt="Designing Cams and Gears" />
+<strong>Aim:</strong></p>
 
+<p>Design a Cam using geometric and analytical methods. Also design a gear profile using the given user specification.</p>
 
+<p><strong>Summary:</strong></p>
 
-**Summary:**
+<p>Used Geogebra to geometrically design a cam, given the desired profile of the follower. Also designed them analytically by plotting functions on Matlab.</p>
 
+<p>Designed a gear by plotting the involute function on Matlab.</p>
 
-
-**Attachments:**
-
+<p><strong>Attachments:</strong></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
-  {% for attachment in page.attachments %}
+  
     <div class="pdf-thumbnail-wrapper">
-      <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      <a href="{{ attachment.link }}" target="_blank">{{ attachment.text }}</a>
+      <canvas class="pdf-thumbnail" data-url="/attachments/KDOM_Report.pdf"></canvas>
+      <a href="/attachments/KDOM_Report.pdf" target="_blank">Read Report</a>
     </div>
-  {% endfor %}
+  
 </div>
 
 <script>
@@ -66,3 +56,5 @@ attachments:
     });
   });
 </script>
+
+:ET

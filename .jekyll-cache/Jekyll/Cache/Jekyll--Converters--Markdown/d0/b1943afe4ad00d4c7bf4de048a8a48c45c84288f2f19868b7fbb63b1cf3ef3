@@ -1,18 +1,25 @@
-I"™<p><img src="/images/wheelchair.png" alt="Autonomous Electric Wheelchair for Children with Physical Challenges" />
+I"π<p><img src="/images/r2d21.png" alt="3-in-1 Scooter Board Wheelchair" />
 <strong>Aim:</strong></p>
 
+<p>To develop a community device that can be used by people without disabilities, but is accessible to wheelchair users, particularly people with paraplegia</p>
+
 <p><strong>Summary:</strong></p>
+
+<p>Developed the complete electronics module of the proof of concept prototype, starting with a functioning mechanical prototype, having worked on features like:</p>
+<ul>
+  <li>Wireless speed control</li>
+  <li>A ‚Äúpush to start‚Äù feature</li>
+  <li>Wireless data logging</li>
+  <li>Mechanical design synthesis of a locking mechanism</li>
+</ul>
+
+<p><strong>Media:</strong></p>
 
 <p><strong>Attachments:</strong></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
-  
-    <div class="pdf-thumbnail-wrapper">
-      <canvas class="pdf-thumbnail" data-url="/attachments/Internship_Report.pdf"></canvas>
-      <a href="/attachments/Internship_Report.pdf" target="_blank">Read Report</a>
-    </div>
   
 </div>
 

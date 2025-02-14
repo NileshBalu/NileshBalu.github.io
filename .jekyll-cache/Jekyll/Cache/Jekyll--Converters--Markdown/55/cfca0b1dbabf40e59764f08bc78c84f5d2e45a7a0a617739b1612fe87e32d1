@@ -1,0 +1,55 @@
+I"<p><img src="/images/lnt.png" alt="Mechanical Engineering Internship" />
+<strong>Aim:</strong></p>
+
+<p>Investigate the factors involved in the design of automotive radiators. Establish a relation between the rate heat rejection and the area of the radiator core.</p>
+
+<p><strong>Summary:</strong></p>
+
+<p>Used the <em>Number of Transfer Units (NTU)</em> method to relate the area of the core with the rate of heat rejection. Analysed experimental data and conducted a comparative study between these values and the predicted values from experiments to validate the result.</p>
+
+<p>Conducted CFD simulations of thermal stress tests on <em>OpenSim</em> and analysed the temperature gradient, stresses and strain to validate new designs of automotive radiators.</p>
+
+<p><strong>Attachments:</strong></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<div class="pdf-thumbnail-container">
+  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pdf-thumbnail").forEach((canvas) => {
+      const url = canvas.getAttribute("data-url");
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        return pdf.getPage(1);
+      }).then(page => {
+        const desiredWidth = 200; // Adjust this to control thumbnail width
+        const viewport = page.getViewport({ scale: 1 }); // Default scale (1) to get original width
+
+        const scale = desiredWidth / viewport.width; // Calculate scale based on desired width
+        const scaledViewport = page.getViewport({ scale });
+
+        const context = canvas.getContext("2d");
+
+        // Set canvas size to match the scaled page
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: scaledViewport
+        };
+
+        return page.render(renderContext).promise;
+      });
+
+      canvas.addEventListener("click", () => {
+        window.open(url, "_blank");
+      });
+    });
+  });
+</script>
+
+:ET

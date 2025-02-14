@@ -17,27 +17,30 @@ attachments:
 
 **Aim:** 
 
-Develop a proof-of-concept prototype of a hand assistive device for people with partial paralysis in their hands as a result of a spinal cord injury.
-The device must be compliant, must contain force feedback and should provide more than one degree of freedom in the thumb.
+Develop a proof-of-concept prototype of a hand assistive device for individuals with partial hand paralysis due to spinal cord injury. The device must be compliant, incorporate force feedback, and provide more than one degree of freedom in the thumb.
 
-**Method:**
+**Summary:**
 
-Inspired by the working principle of the human finger, we employed an underactuated tendon mechanism to actuate the user's fingers. 
-We modeled the tension as a function of the link lengths, the link orientations and the angle of attachment. We also modeled the forward kinematics of the finger under flexion. 
-Using simulations on Simulink Multibody, we estimated the torque required to produce a contact force of 10N. Using this estimated value, we chose the required motor. 
+Inspired by the biomechanics of the human finger, we employed an underactuated tendon-driven mechanism to actuate the user’s fingers. We modeled tendon tension as a function of link lengths, link orientations, and the angle of attachment. Additionally, we formulated the forward kinematics of finger flexion.
 
-A Teensy 4.1 dev board was used to control the device. We chose a motor with a maximum torque rating of 0.8 kg-cm. Force sensors were installed on the fingertips to close the control loop and mantain a constant grip force. We used surface-EMG sensors to estimate user intention. A 3-D printed hand was used as the testing base. 
+Using Simulink Multibody simulations, we estimated the torque required to generate a contact force of 10N and selected an appropriate motor based on these results. A Teensy 4.1 development board was used for control, and we integrated a motor with a maximum torque rating of 0.8 kg-cm.
 
-Our prototype was able to perform 2 gestures - cylindrical grasp and lateral pinch.
+To ensure precise force control, we installed force sensors on the fingertips, allowing for closed-loop control to maintain a constant grip force. Flex sensors were embedded on the glove's backside to prevent unsafe flexion and extension. Additionally, surface-EMG sensors were used to estimate user intent. A 3D-printed hand served as the testing platform.
 
-**Results:**
+The prototype successfully demonstrated two grasping gestures:
+
+    Cylindrical grasp
+    Lateral pinch
+
+
+
+**Media:**
 
 <img src="/images/glove_2.png" alt="{{page.title}}" width="50%">
 
 **Takeaways:**
 
-This was my first large-scale solo project. I gained experience managing all 3 verticals - the coding, the mechanical design of the prototype and the electronic module. This was the first time I worked with compliant systems and was exposed to the caveats of soft robotic mechanisms. I also gained experience developing a state-machine to control the system.
-
+This was my first large-scale solo project, where I managed all three key aspects: coding, mechanical design, and electronics integration. Working with compliant systems introduced me to the challenges of soft robotic mechanisms. Additionally, I gained experience in state machine development for system control.
 
 **Attachments:**
 
