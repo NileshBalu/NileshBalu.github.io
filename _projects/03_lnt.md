@@ -16,17 +16,13 @@ Investigate the key factors influencing the design of automotive radiators and e
 
 **Summary:**
 
-Utilized the Number of Transfer Units (NTU) method to correlate the radiator core area with the rate of heat rejection.
+I utilized the Number of Transfer Units (NTU) method to correlate the radiator core area with the rate of heat rejection. I proceeded to analyze experimental data and conduct a comparative study to validate the predicted results against measured values.
 
-Analyzed experimental data and conducted a comparative study to validate the predicted results against measured values.
-
-Performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.
+I also performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.
 
 **Takeaways:**
 
 This was my first-ever internship, and my biggest takeaway was learning the importance of good documentation. Additionally, working with numerous engineering drawings of radiators helped me understand their real-world significance, reinforcing my coursework in engineering drawings.
-
-**Attachments:**
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>

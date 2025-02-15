@@ -1,15 +1,17 @@
-I"<p><img src="/images/lnt.png" alt="Mechanical Engineering Internship" />
+I"	<p><img src="/images/lnt.png" alt="Mechanical Engineering Internship" />
 <strong>Aim:</strong></p>
 
-<p>Investigate the factors involved in the design of automotive radiators. Establish a relation between the rate heat rejection and the area of the radiator core.</p>
+<p>Investigate the key factors influencing the design of automotive radiators and establish a relationship between the rate of heat rejection and the radiator core area.</p>
 
 <p><strong>Summary:</strong></p>
 
-<p>Used the <em>Number of Transfer Units (NTU)</em> method to relate the area of the core with the rate of heat rejection. Analysed experimental data and conducted a comparative study between these values and the predicted values from experiments to validate the result.</p>
+<p>I utilized the Number of Transfer Units (NTU) method to correlate the radiator core area with the rate of heat rejection. I proceeded to analyze experimental data and conduct a comparative study to validate the predicted results against measured values.</p>
 
-<p>Conducted CFD simulations of thermal stress tests on <em>OpenSim</em> and analysed the temperature gradient, stresses and strain to validate new designs of automotive radiators.</p>
+<p>I also performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.</p>
 
-<p><strong>Attachments:</strong></p>
+<p><strong>Takeaways:</strong></p>
+
+<p>This was my first-ever internship, and my biggest takeaway was learning the importance of good documentation. Additionally, working with numerous engineering drawings of radiators helped me understand their real-world significance, reinforcing my coursework in engineering drawings.</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 

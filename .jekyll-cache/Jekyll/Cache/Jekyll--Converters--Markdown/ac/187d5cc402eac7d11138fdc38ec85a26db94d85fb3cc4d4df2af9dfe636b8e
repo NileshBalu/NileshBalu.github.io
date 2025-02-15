@@ -1,18 +1,17 @@
-I"ì
-<p><img src="/images/wheelchair.png" alt="Autonomous Electric Wheelchair for Children with Physical Challenges" />
+I"<p><img src="/images/wheelchair.png" alt="Autonomous Electric Wheelchair for Children with Physical Challenges" />
 <strong>Aim:</strong></p>
 
-<p>Develop a proof of concept of an autonomous electric wheelchair for user navigation in indoor settings. It should be able to avoid static and dynamic obstacles.</p>
+<p>Develop a proof-of-concept autonomous electric wheelchair for indoor navigation. The system should be capable of avoiding both static and dynamic obstacles.</p>
 
 <p><strong>Summary:</strong></p>
 
-<p>Organized the code base using ROS as the interface between the software and the hardware. Used the <em>gmapping</em> algorithm to map the surroundings. We improved the accuracy of the wheelchair odometry using the unscented kalman filter. Performed autonomous navigation using <em>Rapidly-exploring Rapid Trees (RRT)</em> algorithm, with localisation carried out by the <em>Adaptive Monte Carlo Localiser</em>.</p>
+<p>We structured the codebase using ROS, serving as the interface between software and hardware. The wheelchair was modeled as a differential-drive system and its odometry was calculated from wheel encoder readings. To improve odometry accuracy, we fused IMU sensor data with encoder measurements using an <em>Unscented Kalman Filter (UKF)</em>.</p>
+
+<p>To map the environment, we employed the Gmapping algorithm to generate a 2D occupancy map. Autonomous navigation was implemented using the <em>Rapidly-exploring Random Trees (RRT)</em> algorithm, while localization was managed by the <em>Adaptive Monte Carlo Localizer (AMCL)</em>. Additionally, we generated a 3D point cloud map with the intent to detect stairways, though this feature was not fully implemented.</p>
 
 <p><strong>Takeaways:</strong></p>
 
-<p>This was my first experience using ROS to run and manage code. This was also my first autonomous robot project. So, the learning curve was steep and we were able to get things working.</p>
-
-<p>We faced several issues along the way - the main one being faulty sensor data from the encoders. After a week of debugging the hardware, we realised the motor controller was malfunctioning. We got new ones and the problem was fixed.</p>
+<p>This was my first experience using ROS for code management and my first autonomous robotics project, making for a steep learning curve. Despite the challenges, we successfully got the system operational. One major issue we faced was faulty sensor data from the encoders. After a week of hardware debugging, we discovered that the motor controller was malfunctioning.</p>
 
 <p><strong>Media:</strong></p>
 

@@ -1,19 +1,19 @@
-I"�<p><img src="/images/r2d21.png" alt="3-in-1 Scooter Board Wheelchair" />
+I"2	<p><img src="/images/lnt.png" alt="Mechanical Engineering Internship" />
 <strong>Aim:</strong></p>
 
-<p>To develop a community device that can be used by people without disabilities, but is accessible to wheelchair users, particularly people with paraplegia</p>
+<p>Investigate the key factors influencing the design of automotive radiators and establish a relationship between the rate of heat rejection and the radiator core area.</p>
 
 <p><strong>Summary:</strong></p>
 
-<p>Developed the complete electronics module of the proof of concept prototype, starting with a functioning mechanical prototype, having worked on features like:</p>
-<ul>
-  <li>Wireless speed control</li>
-  <li>A “push to start” feature</li>
-  <li>Wireless data logging</li>
-  <li>Mechanical design synthesis of a locking mechanism</li>
-</ul>
+<p>Utilized the Number of Transfer Units (NTU) method to correlate the radiator core area with the rate of heat rejection.</p>
 
-<p><strong>Media:</strong></p>
+<p>Analyzed experimental data and conducted a comparative study to validate the predicted results against measured values.</p>
+
+<p>Performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.</p>
+
+<p><strong>Takeaways:</strong></p>
+
+<p>This was my first-ever internship, and my biggest takeaway was learning the importance of good documentation. Additionally, working with numerous engineering drawings of radiators helped me understand their real-world significance, reinforcing my coursework in engineering drawings.</p>
 
 <p><strong>Attachments:</strong></p>
 

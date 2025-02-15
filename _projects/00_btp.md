@@ -21,26 +21,19 @@ Develop a proof-of-concept prototype of a hand assistive device for individuals 
 
 **Summary:**
 
-Inspired by the biomechanics of the human finger, we employed an underactuated tendon-driven mechanism to actuate the user’s fingers. We modeled tendon tension as a function of link lengths, link orientations, and the angle of attachment. Additionally, we formulated the forward kinematics of finger flexion.
+Inspired by the biomechanics of the human finger, we employed an *underactuated tendon-driven mechanism* to actuate the user’s fingers. We modeled tendon tension as a function of link lengths, link orientations, and the angle of attachment. Additionally, we formulated the forward kinematics of finger flexion.
 
 Using Simulink Multibody simulations, we estimated the torque required to generate a contact force of 10N and selected an appropriate motor based on these results. A Teensy 4.1 development board was used for control, and we integrated a motor with a maximum torque rating of 0.8 kg-cm.
 
 To ensure precise force control, we installed force sensors on the fingertips, allowing for closed-loop control to maintain a constant grip force. Flex sensors were embedded on the glove's backside to prevent unsafe flexion and extension. Additionally, surface-EMG sensors were used to estimate user intent. A 3D-printed hand served as the testing platform.
 
-The prototype successfully demonstrated two grasping gestures:
-
-    Cylindrical grasp
-    Lateral pinch
-
-
-
-**Media:**
-
-<img src="/images/glove_2.png" alt="{{page.title}}" width="50%">
+The prototype successfully demonstrated two grasping gestures: Cylindrical grasp and Lateral pinch
 
 **Takeaways:**
 
 This was my first large-scale solo project, where I managed all three key aspects: coding, mechanical design, and electronics integration. Working with compliant systems introduced me to the challenges of soft robotic mechanisms. Additionally, I gained experience in state machine development for system control.
+
+**Media:**
 
 **Attachments:**
 
