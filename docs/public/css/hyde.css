@@ -248,3 +248,18 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+.pdf-thumbnail-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if too many thumbnails */
+  gap: 20px; /* Space between thumbnails */
+  justify-content: center; /* Center align if needed */
+  align-items: flex-start; /* Align top edges */
+}
+
+.pdf-thumbnail-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack thumbnail and link */
+  align-items: center; /* Center align items */
+  text-align: center;
+}

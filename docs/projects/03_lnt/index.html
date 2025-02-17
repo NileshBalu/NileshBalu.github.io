@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Mechanical Engineering Internship &middot; Nilesh Balu
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Nilesh Balu
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="/attachments//CV.pdf">Curriculum Vitae</a>
+      <!-- <a class="sidebar-nav-item" href=""></a> -->
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Mechanical Engineering Internship</h1>
+  <p><img src="/images/lnt.png" alt="Mechanical Engineering Internship" />
+<strong>Aim:</strong></p>
+
+<p>Investigate the key factors influencing the design of automotive radiators and establish a relationship between the rate of heat rejection and the radiator core area.</p>
+
+<p><strong>Summary:</strong></p>
+
+<p>I utilized the <em>Number of Transfer Units (NTU)</em> method to correlate the radiator core area with the rate of heat rejection. I proceeded to analyze experimental data and conduct a comparative study to validate the predicted results against measured values.</p>
+
+<p>I also performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.</p>
+
+<p><strong>Takeaways:</strong></p>
+
+<p>This was my first-ever internship, and my biggest takeaway was learning the importance of good documentation. Additionally, working with numerous engineering drawings of radiators helped me understand their real-world significance, reinforcing my coursework in engineering drawings.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<div class="pdf-thumbnail-container">
+  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pdf-thumbnail").forEach((canvas) => {
+      const url = canvas.getAttribute("data-url");
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        return pdf.getPage(1);
+      }).then(page => {
+        const desiredWidth = 200; // Adjust this to control thumbnail width
+        const viewport = page.getViewport({ scale: 1 }); // Default scale (1) to get original width
+
+        const scale = desiredWidth / viewport.width; // Calculate scale based on desired width
+        const scaledViewport = page.getViewport({ scale });
+
+        const context = canvas.getContext("2d");
+
+        // Set canvas size to match the scaled page
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: scaledViewport
+        };
+
+        return page.render(renderContext).promise;
+      });
+
+      canvas.addEventListener("click", () => {
+        window.open(url, "_blank");
+      });
+    });
+  });
+</script>
+
+
+</div>
+
+    </div>
+
+  </body>
+</html>

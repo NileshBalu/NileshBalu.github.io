@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Designing Cams and Gears &middot; Nilesh Balu
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Nilesh Balu
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="/attachments//CV.pdf">Curriculum Vitae</a>
+      <!-- <a class="sidebar-nav-item" href=""></a> -->
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Designing Cams and Gears</h1>
+  <p><img src="/images/gears.png" alt="Designing Cams and Gears" />
+<strong>Aim:</strong></p>
+
+<p>Design a Cam using geometric and analytical methods. Also design a gear profile using the given user specification.</p>
+
+<p><strong>Summary:</strong></p>
+
+<p>Used Geogebra to geometrically design a cam, given the desired profile of the follower. Also designed them analytically by plotting functions on Matlab.</p>
+
+<p>Designed a gear by plotting the involute function on Matlab.</p>
+
+<p><strong>Takeaways:</strong></p>
+
+<p>This was the first of the many <em>Matlab</em> projects I had done.</p>
+
+<p><strong>Attachments:</strong></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<div class="pdf-thumbnail-container">
+  
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/KDOM_A.pdf"></canvas>
+      <a href="/attachments/KDOM_A.pdf" target="_blank">Cam</a>
+    </div>
+  
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/KDOM_B.pdf"></canvas>
+      <a href="/attachments/KDOM_B.pdf" target="_blank">Gear</a>
+    </div>
+  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pdf-thumbnail").forEach((canvas) => {
+      const url = canvas.getAttribute("data-url");
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        return pdf.getPage(1);
+      }).then(page => {
+        const desiredWidth = 200; // Adjust this to control thumbnail width
+        const viewport = page.getViewport({ scale: 1 }); // Default scale (1) to get original width
+
+        const scale = desiredWidth / viewport.width; // Calculate scale based on desired width
+        const scaledViewport = page.getViewport({ scale });
+
+        const context = canvas.getContext("2d");
+
+        // Set canvas size to match the scaled page
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: scaledViewport
+        };
+
+        return page.render(renderContext).promise;
+      });
+
+      canvas.addEventListener("click", () => {
+        window.open(url, "_blank");
+      });
+    });
+  });
+</script>
+
+
+</div>
+
+    </div>
+
+  </body>
+</html>
