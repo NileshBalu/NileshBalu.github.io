@@ -31,6 +31,10 @@ collections:
     output:       true
     permalink:    /projects/:path/
 
+  coursework:
+    output:       true
+    permalink:    /coursework/:path/
+
 # Custom vars
 version:          2.1.0
 

@@ -14,28 +14,41 @@ title: Projects
 </head>
 <body>
   <header>
-    <p>Here is a list of projects I have worked on.</p>
+    <p>These are all the projects I have worked on. The list under each sub-heading is in reverse chronological order. <b>Click on either the image or the title to view a more detailed description.</b>
+    </p>
   </header>
 
+  <h1>Research/Industry</h1>
     <div class="projects-list">
       {% for project in site.projects %}
       <div class="project-item">
         <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
         <a href="{{ project.url }}">
-          <img src="{{ project.image }}" alt="{{ project.title }}" width="50%">
+          <img src="{{ project.image }}" alt="{{ project.title }}" width="30%">
         </a>
         <p>{{ project.description }}</p>
-        <p><strong>Type:</strong> {{ project.type }}</p>
-        <p><strong>Location:</strong> {{ project.location }}</p>
+        <strong>Type:</strong> {{ project.type }}<br>
+        <strong>Location:</strong> {{ project.location }}<br>
+        <strong>Date:</strong> {{ project.Date }}
+      </div>
+      {% endfor %}
+    <h1>Coursework</h1>
+      {% for coursework in site.coursework %}
+      <div class="coursework-item">
+        <h2><a href="{{ coursework.url }}">{{ coursework.title }}</a></h2>
+        <a href="{{ coursework.url }}">
+          <img src="{{ coursework.image }}" alt="{{ coursework.title }}" width="30%">
+        </a>
+        <p>{{ coursework.description }}</p>
+        <strong>Type:</strong> {{ coursework.type }}<br>
+        <strong>Location:</strong> {{ coursework.location }}<br>
+        <strong>Date:</strong> {{ coursework.Date }}
       </div>
       {% endfor %}
     </div>
 
-    <!-- Add more projects here -->
-  </section>
-
-  <footer>
+  <!-- <footer>
     <p>Website by Nilesh Balu</p>
-  </footer>
+  </footer> -->
 </body>
 </html>

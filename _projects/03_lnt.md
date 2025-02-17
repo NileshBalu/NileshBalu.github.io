@@ -2,9 +2,10 @@
 layout: page
 title: "Mechanical Engineering Internship"
 image: "/images/lnt.png"
-description: "A study of Automotive Radiators."
+description: "A study on the design and validation of automotive radiators."
 location: "Larsen and Toubro Technology Services, India"
 type: "Industrial Internship"
+Date: "Jun 2022 - Jul 2022"
 attachments:
   # - link: "/attachments/ID5130_Project.pdf"
   #   text: "Read Report"
@@ -16,7 +17,7 @@ Investigate the key factors influencing the design of automotive radiators and e
 
 **Summary:**
 
-I utilized the Number of Transfer Units (NTU) method to correlate the radiator core area with the rate of heat rejection. I proceeded to analyze experimental data and conduct a comparative study to validate the predicted results against measured values.
+I utilized the *Number of Transfer Units (NTU)* method to correlate the radiator core area with the rate of heat rejection. I proceeded to analyze experimental data and conduct a comparative study to validate the predicted results against measured values.
 
 I also performed CFD simulations of thermal stress tests using OpenSim, analyzing temperature gradients, stresses, and strain to evaluate new radiator designs.
 
