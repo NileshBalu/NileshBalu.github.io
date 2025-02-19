@@ -29,7 +29,6 @@ Through this course and the project, I was introduced to the concepts of paralle
 
 **Attachments:**
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
