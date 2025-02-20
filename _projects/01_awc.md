@@ -6,6 +6,7 @@ description: "Implemented mapping and autonomous driving on an electric wheelcha
 location: "Ontario Tech University, Canada"
 type: "Mitacs Global Research Internship"
 Date: "May 2023 - Aug 2023"
+prof: "Prof. Scott Nokleby"
 attachments:
   - link: "/attachments/Internship_Report.pdf"
     text: "Read Report"
@@ -25,18 +26,18 @@ To map the environment, we employed the Gmapping algorithm to generate a 2D occu
 
 This was my first experience using ROS for code management and my first autonomous robotics project, making for a steep learning curve. Despite the challenges, we successfully got the system operational. One major issue we faced was faulty sensor data from the encoders. After a week of hardware debugging, we discovered that the motor controller was malfunctioning. 
 
-**Media:**
-
 **Attachments:**
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
   {% for attachment in page.attachments %}
+    <a href="{{ attachment.link }}" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      <a href="{{ attachment.link }}" target="_blank">{{ attachment.text }}</a>
+      {{ attachment.text }}
     </div>
+    </a>
   {% endfor %}
 </div>
 

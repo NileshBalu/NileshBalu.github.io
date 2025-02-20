@@ -34,10 +34,12 @@ This served as a good introduction to how CFD solvers work. Moreover, I was intr
 
 <div class="pdf-thumbnail-container">
   {% for attachment in page.attachments %}
+    <a href="{{ attachment.link }}" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      <a href="{{ attachment.link }}" target="_blank">{{ attachment.text }}</a>
+      {{ attachment.text }}
     </div>
+    </a>
   {% endfor %}
 </div>
 

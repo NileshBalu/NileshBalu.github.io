@@ -30,10 +30,12 @@ I took up this topic because it was very fascinating. What I enjoyed the most ab
 
 <div class="pdf-thumbnail-container">
   {% for attachment in page.attachments %}
+    <a href="{{ attachment.link }}" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      <a href="{{ attachment.link }}" target="_blank">{{ attachment.text }}</a>
+      {{ attachment.text }}
     </div>
+    </a>
   {% endfor %}
 </div>
 

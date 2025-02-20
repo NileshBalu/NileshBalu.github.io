@@ -1,46 +1,29 @@
----
-layout: page
-title: "Designing Cams and Gears"
-image: "/images/gears.png"
-description: "Designing a Cam and a Gear using user's specifications."
-location: "Indian Institute of Technology Madras, India"
-type: "Course Project: Kinematics and Dynamics of Machinery"
-Date: "Nov 2021 - Dec 2021"
-attachments:
-  - link: "/attachments/KDOM_A.pdf"
-    text: "Cam"
-  - link: "/attachments/KDOM_B.pdf"
-    text: "Gear"
----
-![{{page.title}}]({{page.image}})
-**Aim:** 
+I"Å<p><img src="/images/auxetic.png" alt="A Study of Auxetic Metamaterials" />
+<strong>Aim:</strong></p>
 
-Design a Cam using geometric and analytical methods. Also design a gear profile using the given user specification.
+<p>Review the derivation of the Poisson ration of auxetic metamaterials.</p>
 
-**Summary:**
+<p><strong>Summary:</strong></p>
 
-Used Geogebra to geometrically design a cam, given the desired profile of the follower. Also designed them analytically by plotting functions on Matlab.
+<p>Analysed auxetic metamaterials with a re-entrant honeycomb structure in 2D and 3D. Also analysed synclastic bending and the possible applications of this property.</p>
 
-Designed a gear by plotting the involute function on Matlab.
+<p><strong>Takeaways:</strong></p>
 
-**Takeaways:**
+<p>I took up this topic because it was very fascinating. What I enjoyed the most about this project was the fact that most of the equations used to derive the analytical expression were covered in the course.</p>
 
-This was the first of the many *Matlab* projects I had done. 
-
-**Attachments:**
-
+<p><strong>Attachments:</strong></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
-  {% for attachment in page.attachments %}
-    <a href="{{ attachment.link }}" target="_blank">
+  
+    <a href="/attachments/Auxetic Materials.pdf" target="_blank">
     <div class="pdf-thumbnail-wrapper">
-      <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      {{ attachment.text }}
+      <canvas class="pdf-thumbnail" data-url="/attachments/Auxetic Materials.pdf"></canvas>
+      Read Report
     </div>
     </a>
-  {% endfor %}
+  
 </div>
 
 <script>
@@ -77,3 +60,5 @@ This was the first of the many *Matlab* projects I had done.
     });
   });
 </script>
+
+:ET

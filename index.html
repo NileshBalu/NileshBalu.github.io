@@ -11,6 +11,9 @@ title: Home
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ page.title }} | Nilesh Balu</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+  <script defer src="script.js"></script>
+
 </head>
 <body>
 
@@ -48,79 +51,39 @@ title: Home
   <section id="projects">
     <header>
       <h2>Projects</h2>
-      <p>These are all the projects I have worked on. <b>Click the image or title for more details.</b></p>
+      <p>These are all the projects I have worked on. <b>Click the project tile for more details.</b></p>
     </header>
 
     <h3>Research/Industry</h3>
     <div class="projects-list">
       {% for project in site.projects %}
-      <div class="project-item">
-        <h4><a href="{{ project.url }}">{{ project.title }}</a></h4>
-        <a href="{{ project.url }}">
+      <a href="{{ project.url }}">
+        <div class="project-item">
+          <h4>{{ project.type }} :  {{ project.title }}</h4>    
           <img src="{{ project.image }}" alt="{{ project.title }}" width="30%">
-        </a>
-        <p>{{ project.description }}</p>
-        <strong>Type:</strong> {{ project.type }}<br>
-        <strong>Location:</strong> {{ project.location }}<br>
-        <strong>Date:</strong> {{ project.Date }}
-      </div>
+          <p>{{ project.description }}</p>
+          <strong>{{ project.prof }}</strong><br>
+          <i>{{ project.location }}; <u>{{ project.Date }}</u></i>
+        </div>
+      </a>
       {% endfor %}
     </div>
 
     <h3>Coursework</h3>
     <div class="coursework-list">
       {% for coursework in site.coursework %}
-      <div class="coursework-item">
-        <h4><a href="{{ coursework.url }}">{{ coursework.title }}</a></h4>
-        <a href="{{ coursework.url }}">
+      <a href="{{ coursework.url }}">
+        <div class="coursework-item">
+          <h4>{{ coursework.title }}</h4>
           <img src="{{ coursework.image }}" alt="{{ coursework.title }}" width="30%">
-        </a>
-        <p>{{ coursework.description }}</p>
-        <strong>Type:</strong> {{ coursework.type }}<br>
-        <strong>Location:</strong> {{ coursework.location }}<br>
-        <strong>Date:</strong> {{ coursework.Date }}
-      </div>
+          <p>{{ coursework.description }}</p>
+          <i>{{ coursework.type }}, {{ coursework.location }}, <u>{{ coursework.Date }}</u></i>
+        </div>
+      </a>
       {% endfor %}
     </div>
   </section>
   <!-- </div> -->
-
-  <!-- JavaScript for Scroll-based Tab Highlighting -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll("section");
-      const navLinks = {
-        home: document.getElementById("home-link"),
-        projects: document.getElementById("projects-link")
-      };
-  
-      const observer = new IntersectionObserver(
-        (entries) => {
-          let activeSet = false;
-  
-          entries.forEach((entry) => {
-            const id = entry.target.getAttribute("id");
-            if (entry.isIntersecting && !activeSet) {
-              // Remove 'active' from all links
-              Object.values(navLinks).forEach((link) =>
-                link.classList.remove("active")
-              );
-  
-              // Add 'active' to the intersecting section's link
-              navLinks[id]?.classList.add("active");
-              activeSet = true;
-            }
-          });
-        },
-        {
-          threshold: 0.4 // Adjust this if needed
-        }
-      );
-  
-      sections.forEach((section) => observer.observe(section));
-    });
-  </script>
-  
   
 </body>
 </html>

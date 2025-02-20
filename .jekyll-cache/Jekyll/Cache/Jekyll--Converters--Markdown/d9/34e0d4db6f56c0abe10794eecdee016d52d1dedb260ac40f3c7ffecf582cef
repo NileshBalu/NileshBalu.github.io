@@ -1,46 +1,38 @@
----
-layout: page
-title: "Designing Cams and Gears"
-image: "/images/gears.png"
-description: "Designing a Cam and a Gear using user's specifications."
-location: "Indian Institute of Technology Madras, India"
-type: "Course Project: Kinematics and Dynamics of Machinery"
-Date: "Nov 2021 - Dec 2021"
-attachments:
-  - link: "/attachments/KDOM_A.pdf"
-    text: "Cam"
-  - link: "/attachments/KDOM_B.pdf"
-    text: "Gear"
----
-![{{page.title}}]({{page.image}})
-**Aim:** 
+I"		<p><img src="/images/gears.png" alt="Designing Cams and Gears" />
+<strong>Aim:</strong></p>
 
-Design a Cam using geometric and analytical methods. Also design a gear profile using the given user specification.
+<p>Design a Cam using geometric and analytical methods. Also design a gear profile using the given user specification.</p>
 
-**Summary:**
+<p><strong>Summary:</strong></p>
 
-Used Geogebra to geometrically design a cam, given the desired profile of the follower. Also designed them analytically by plotting functions on Matlab.
+<p>Used Geogebra to geometrically design a cam, given the desired profile of the follower. Also designed them analytically by plotting functions on Matlab.</p>
 
-Designed a gear by plotting the involute function on Matlab.
+<p>Designed a gear by plotting the involute function on Matlab.</p>
 
-**Takeaways:**
+<p><strong>Takeaways:</strong></p>
 
-This was the first of the many *Matlab* projects I had done. 
+<p>This was the first of the many <em>Matlab</em> projects I had done.</p>
 
-**Attachments:**
-
+<p><strong>Attachments:</strong></p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
 <div class="pdf-thumbnail-container">
-  {% for attachment in page.attachments %}
-    <a href="{{ attachment.link }}" target="_blank">
+  
+    <a href="/attachments/KDOM_A.pdf" target="_blank">
     <div class="pdf-thumbnail-wrapper">
-      <canvas class="pdf-thumbnail" data-url="{{ attachment.link }}"></canvas>
-      {{ attachment.text }}
+      <canvas class="pdf-thumbnail" data-url="/attachments/KDOM_A.pdf"></canvas>
+      Cam
     </div>
     </a>
-  {% endfor %}
+  
+    <a href="/attachments/KDOM_B.pdf" target="_blank">
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/KDOM_B.pdf"></canvas>
+      Gear
+    </div>
+    </a>
+  
 </div>
 
 <script>
@@ -77,3 +69,5 @@ This was the first of the many *Matlab* projects I had done.
     });
   });
 </script>
+
+:ET

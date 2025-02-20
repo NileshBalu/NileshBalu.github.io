@@ -19,17 +19,16 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
-  }
-}
-@media (min-width: 58em) {
-  html {
     font-size: 20px;
   }
 }
 
 /* Sidebar */
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
@@ -61,6 +60,10 @@ html {
 .sidebar-nav {
   margin-bottom: 1rem;
 }
+.sidebar-nav-list{
+  display: block;
+
+}
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
@@ -69,9 +72,11 @@ a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
-.sidebar-nav-item.active {
-  font-weight: bold !important;
+
+.nav-link.active {
+  font-weight: bold;
 }
+
 
 @media (min-width: 48em) {
   .sidebar-sticky {
@@ -145,6 +150,7 @@ a.sidebar-nav-item:focus {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  color: #333;
 }
 .project-item:hover, .coursework-item:hover {
   transform: scale(1.02);
@@ -167,6 +173,11 @@ a.sidebar-nav-item:focus {
   text-align: center;
 }
 
+.pdf-thumbnail-wrapper:hover {
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .pdf-thumbnail-container {
@@ -176,4 +187,29 @@ a.sidebar-nav-item:focus {
   .project-item img, .coursework-item img {
     width: 100%;
   }
+}
+
+/* Ensure that the list items appear in a horizontal line */
+.sidebar-social {
+  display: flex; /* Use Flexbox */
+  margin-top: 40px; /* Optional: Add space above the social icons */
+}
+
+.sidebar-social-list {
+  list-style-type: none;
+  padding: 0 40px; /* Optional: Add space around the icons */
+  display: flex; /* This will arrange the items horizontally */
+  gap: 15px; /* Space between icons */
+}
+
+.sidebar-social-list li {
+  display: inline-block; /* Ensures that the list items are inline */
+}
+
+.sidebar-social-list a {
+  display: inline-block; /* Make sure the links behave like inline-blocks */
+}
+
+.sidebar-social-list a:hover {
+  opacity: 0.7;
 }

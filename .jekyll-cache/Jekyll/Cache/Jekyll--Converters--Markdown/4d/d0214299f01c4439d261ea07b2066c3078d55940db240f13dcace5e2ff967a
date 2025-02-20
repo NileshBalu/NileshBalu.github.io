@@ -1,4 +1,4 @@
-I"¹<p><img src="/images/seam_carving.png" alt="Seam Carving - A Parallel Implementation" />
+I"Ã<p><img src="/images/seam_carving.png" alt="Seam Carving - A Parallel Implementation" />
 <strong>Aim:</strong></p>
 
 <p>Implement the seam carving operation from scratch using the <em>OpenMP</em>, <em>MPI</em> and <em>OpenACC</em> frameworks and compare their performance.</p>
@@ -23,10 +23,12 @@
 
 <div class="pdf-thumbnail-container">
   
+    <a href="/attachments/ID5130_Project.pdf" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="/attachments/ID5130_Project.pdf"></canvas>
-      <a href="/attachments/ID5130_Project.pdf" target="_blank">Read Report</a>
+      Read Report
     </div>
+    </a>
   
 </div>
 
