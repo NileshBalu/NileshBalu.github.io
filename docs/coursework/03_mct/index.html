@@ -35,6 +35,7 @@
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <img src="/images/profile.png" alt="Nilesh Balu" width="200" style="border-radius: 5%;">
       <h1>
         <a href="/">
           Nilesh Balu
@@ -44,35 +45,41 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/projects/">Projects</a>
-          
-        
-      
-
-      <a class="sidebar-nav-item" href="/attachments//CV.pdf">Curriculum Vitae</a>
-      <!-- <a class="sidebar-nav-item" href=""></a> -->
-      <span class="sidebar-nav-item">Currently v2.1.0</span>
+      <ul class="sidebar-nav-list">
+        <li class="sidebar-nav-item">
+          <a href="/#home" id="home-link" class="nav-link">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/#projects" id="projects-link" class="nav-link">Projects</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/attachments/CV.pdf" target="_blank">Curriculum Vitae</a>
+        </li>
+      </ul>
     </nav>
 
-    <p>&copy; 2025. All rights reserved.</p>
+     <!-- Social Links Section -->
+     <div class="sidebar-social">
+      <ul class="sidebar-social-list">
+        <li>
+          <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">
+            <img src="/images/linkedin.png" alt="LinkedIn" width="30">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/your-github-id" target="_blank">
+            <img src="/images/github.png" alt="GitHub" width="30">
+          </a>
+        </li>
+        <li>
+          <a href="mailto:nileshbalu892[at]gmail[dot]com" target="_blank">
+            <img src="/images/email.png" alt="EMail" width="30">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <p>&copy; Last Updated: 20th Feb 2025</p>
   </div>
 </div>
 
@@ -99,15 +106,19 @@
 
 <div class="pdf-thumbnail-container">
   
+    <a href="/attachments/CH5120_1.pdf" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="/attachments/CH5120_1.pdf"></canvas>
-      <a href="/attachments/CH5120_1.pdf" target="_blank">Comparing Kalman and Particle Filters</a>
+      Comparing Kalman and Particle Filters
     </div>
+    </a>
   
+    <a href="/attachments/CH5120_2.pdf" target="_blank">
     <div class="pdf-thumbnail-wrapper">
       <canvas class="pdf-thumbnail" data-url="/attachments/CH5120_2.pdf"></canvas>
-      <a href="/attachments/CH5120_2.pdf" target="_blank">MPC using Kalman Filter</a>
+      MPC using Kalman Filter
     </div>
+    </a>
   
 </div>
 

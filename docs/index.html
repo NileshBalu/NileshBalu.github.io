@@ -35,6 +35,7 @@
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+      <img src="/images/profile.png" alt="Nilesh Balu" width="200" style="border-radius: 5%;">
       <h1>
         <a href="/">
           Nilesh Balu
@@ -44,35 +45,41 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">Home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item" href="/projects/">Projects</a>
-          
-        
-      
-
-      <a class="sidebar-nav-item" href="/attachments//CV.pdf">Curriculum Vitae</a>
-      <!-- <a class="sidebar-nav-item" href=""></a> -->
-      <span class="sidebar-nav-item">Currently v2.1.0</span>
+      <ul class="sidebar-nav-list">
+        <li class="sidebar-nav-item">
+          <a href="/#home" id="home-link" class="nav-link">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/#projects" id="projects-link" class="nav-link">Projects</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/attachments/CV.pdf" target="_blank">Curriculum Vitae</a>
+        </li>
+      </ul>
     </nav>
 
-    <p>&copy; 2025. All rights reserved.</p>
+     <!-- Social Links Section -->
+     <div class="sidebar-social">
+      <ul class="sidebar-social-list">
+        <li>
+          <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">
+            <img src="/images/linkedin.png" alt="LinkedIn" width="30">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/your-github-id" target="_blank">
+            <img src="/images/github.png" alt="GitHub" width="30">
+          </a>
+        </li>
+        <li>
+          <a href="mailto:nileshbalu892[at]gmail[dot]com" target="_blank">
+            <img src="/images/email.png" alt="EMail" width="30">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <p>&copy; Last Updated: 20th Feb 2025</p>
   </div>
 </div>
 
@@ -86,43 +93,155 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home | Nilesh Balu</title>
   <link rel="stylesheet" href="//assets/css/style.css">
+
+  <script defer src="script.js"></script>
+
 </head>
 <body>
-  <header>
-    <img src="/images/profile.png" alt="Nilesh Balu" width="200" style="border-radius: 5%;">
-    <h1>Nilesh Balu</h1>
-    <h2>Master's Student in Mechanical Engineering at ETH Zurich</h2>
-    <p>Robotics, Systems and Controls | Rehabilitation and Medical Robotics</p>
-  </header>
 
-  <section class="about">
-    <h3>About Me</h3>
-    <p> I am a Master’s student in the Mechanical Engineering Department at <em>Eidgenössische Technische Hochschule (ETH) Zürich</em>, passionate about robotics. I am driven by challenging research questions in this field and the opportunity to make a positive impact on people’s lives.</p>
-    <p> Currently, I am working with the <em>Product Development Group Zurich</em>, to develop a digital twin of an operating room to enable seamless evaluation of surgeon training. In this project, I explore <em>human pose estimation</em> and <em>state estimation</em>. Additionally, I am a student assistant on the organizing team of the <em>Robotics Summer School</em>, conducted by <em>RobotX</em> at ETH Zurich.</p>
-    <p> I completed my Bachelor’s degree at the <em>Indian Institute of Technology (IIT) Madras</em>, where I graduated at the top of my class and won the <em>Best Thesis Award</em>. During my time there, I developed a speed-control submodule, an autonomous system using ROS, and a prototype of a compliant hand exoskeleton.</p>
+  <!-- Home Section -->
+  <section id="home">
+    <header>
+      <h1>Nilesh Balu</h1>
+      <h2>Master's Student in Mechanical Engineering at ETH Zurich</h2>
+      <p>Robotics, Systems and Controls | Rehabilitation and Medical Robotics</p>
+    </header>
+
+    <div class="about">
+      <h3>About Me</h3>
+      <p> I am a Master’s student in the Mechanical Engineering Department at <em>ETH Zürich</em>, passionate about robotics...</p>
+    </div>
+
+    <div class="education">
+      <h3>Education</h3>
+      <ul>
+        <li><strong>ETH Zürich</strong> — Master of Science ETH in Mechanical Engineering, 2024–Present</li>
+        <li><strong>IIT Madras</strong> — Bachelor of Technology (Honors) in Mechanical Engineering, 2020–2024</li>
+      </ul>
+    </div>
+
+    <div class="research">
+      <h3>Research Interests</h3>
+      <ul>
+        <li>Robotics for Rehabilitation and Assistive Technology</li>
+        <li>Medical Robotics (Perception, System Control, and Modeling)</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="education">
-    <h3>Education</h3>
-    <ul>
-      <li><strong>ETH Zürich</strong> — Master of Science ETH in Mechanical Engineering, 2024–Present</li>
-      <li><strong>IIT Madras</strong> — Bachelor of Technology (Honors) in Mechanical Engineering with a Minor in Systems Engineering, 2020–2024</li>
-    </ul>
-  </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <header>
+      <h2>Projects</h2>
+      <p>These are all the projects I have worked on. <b>Click the project tile for more details.</b></p>
+    </header>
 
-  <section class="research">
-    <h3>Research Interests</h3>
-    <p>I am interested in the intersection of robotics and human well-being, with a particular focus on:</p>
-    <ul>
-      <li>Robotics for Rehabilitation and Assistive Technology</li>
-      <li>Medical Robotics (Perception, System Control, and Modeling)</li>
-    </ul>
-    <p>As part of my current and future research, I look forward to collaborating with peers and professors on projects in these fields.</p>
-  </section>
+    <h3>Research/Industry</h3>
+    <div class="projects-list">
+      
+      <a href="/projects/00_btp/">
+        <div class="project-item">
+          <h4>Bachelor Thesis Project :  A Wearable Hand Assistive Device</h4>    
+          <img src="/images/glove_1.png" alt="A Wearable Hand Assistive Device" width="30%">
+          <p>Developed the proof of concept prototype of an assistive device for the hand that would provide the assistive forces (up to 10 N) required to grasp objects and perform activities of daily living.</p>
+          <strong>Prof. Manish Anand</strong><br>
+          <i>Indian Institute of Technology Madras, India; <u>Aug 2023 - May 2024</u></i>
+        </div>
+      </a>
+      
+      <a href="/projects/01_awc/">
+        <div class="project-item">
+          <h4>Mitacs Global Research Internship :  Autonomous Electric Wheelchair for Children with Physical Challenges</h4>    
+          <img src="/images/wheelchair.png" alt="Autonomous Electric Wheelchair for Children with Physical Challenges" width="30%">
+          <p>Implemented mapping and autonomous driving on an electric wheelchair.</p>
+          <strong>Prof. Scott Nokleby</strong><br>
+          <i>Ontario Tech University, Canada; <u>May 2023 - Aug 2023</u></i>
+        </div>
+      </a>
+      
+      <a href="/projects/02_r2d2/">
+        <div class="project-item">
+          <h4>Research Internship :  3-in-1 Scooter Board Wheelchair</h4>    
+          <img src="/images/r2d21.png" alt="3-in-1 Scooter Board Wheelchair" width="30%">
+          <p>Developed the complete electronics module of a community device accessible by wheelchair users.</p>
+          <strong>Prof. Manish Anand</strong><br>
+          <i>Rehabilitation Research and Device Development Lab, India; <u>Jul 2022 - May 2023</u></i>
+        </div>
+      </a>
+      
+      <a href="/projects/03_lnt/">
+        <div class="project-item">
+          <h4>Industrial Internship :  Mechanical Engineering Internship</h4>    
+          <img src="/images/lnt.png" alt="Mechanical Engineering Internship" width="30%">
+          <p>A study on the design and validation of automotive radiators.</p>
+          <strong></strong><br>
+          <i>Larsen and Toubro Technology Services, India; <u>Jun 2022 - Jul 2022</u></i>
+        </div>
+      </a>
+      
+    </div>
 
-  <!-- <footer>
-    <p>Website by Nilesh Balu</p>
-  </footer> -->
+    <h3>Coursework</h3>
+    <div class="coursework-list">
+      
+      <a href="/coursework/00_seam_carving/">
+        <div class="coursework-item">
+          <h4>Seam Carving - A Parallel Implementation</h4>
+          <img src="/images/seam_carving.png" alt="Seam Carving - A Parallel Implementation" width="30%">
+          <p>A parellel implementation of the Seam Carving operation, on OpenMP, MPI and OpenACC frameworks.</p>
+          <i>Course Project: Parallel Scientific Computing, Indian Institute of Technology Madras, India, <u>Mar 2024 - May 2024</u></i>
+        </div>
+      </a>
+      
+      <a href="/coursework/01_mohm/">
+        <div class="coursework-item">
+          <h4>Inverse Dynamics Analysis</h4>
+          <img src="/images/yoga.png" alt="Inverse Dynamics Analysis" width="30%">
+          <p>Performed an inverse dynamics analysis on yoga poses to determine the forces exerted by different muscle groups. Summarized a paper that introduced the 'Equivalent System' method for performing inverse dynamics analysis on a prosthetic leg.</p>
+          <i>Course Project: Mechanics of Human Movement, Indian Institute of Technology Madras, India, <u>Mar 2023 - Apr 2023</u></i>
+        </div>
+      </a>
+      
+      <a href="/coursework/02_fins/">
+        <div class="coursework-item">
+          <h4>Numerical Analysis of Fluid Flow in a Pipe with Annular Fins</h4>
+          <img src="/images/fins.png" alt="Numerical Analysis of Fluid Flow in a Pipe with Annular Fins" width="30%">
+          <p>Developed a numerical solver in C++ for simulating fluid flow through a pipe with annular fins using the Finite Volume method.</p>
+          <i>Course Project: Computational Heat and Fluid Flow, Indian Institute of Technology Madras, India, <u>Mar 2023 - Apr 2023</u></i>
+        </div>
+      </a>
+      
+      <a href="/coursework/03_mct/">
+        <div class="coursework-item">
+          <h4>Model Predictive Control for the 4 Tank Problem</h4>
+          <img src="/images/tank.png" alt="Model Predictive Control for the 4 Tank Problem" width="30%">
+          <p>A Model Predictive Controller to control the heights of liquid in the 4-tank setting.</p>
+          <i>Course Project: Modern Control Theory, Indian Institute of Technology Madras, India, <u>Oct 2022 - Nov 2022</u></i>
+        </div>
+      </a>
+      
+      <a href="/coursework/04_auxetic/">
+        <div class="coursework-item">
+          <h4>A Study of Auxetic Metamaterials</h4>
+          <img src="/images/auxetic.png" alt="A Study of Auxetic Metamaterials" width="30%">
+          <p>Paper review and modelling the Poisson ratio of auxetic metamaterials.</p>
+          <i>Course Project: Strength of Materials, Indian Institute of Technology Madras, India, <u>Sep 2021 - Dec 2021</u></i>
+        </div>
+      </a>
+      
+      <a href="/coursework/05_kdom/">
+        <div class="coursework-item">
+          <h4>Designing Cams and Gears</h4>
+          <img src="/images/gears.png" alt="Designing Cams and Gears" width="30%">
+          <p>Designing a Cam and a Gear using user's specifications.</p>
+          <i>Course Project: Kinematics and Dynamics of Machinery, Indian Institute of Technology Madras, India, <u>Nov 2021 - Dec 2021</u></i>
+        </div>
+      </a>
+      
+    </div>
+  </section>
+  <!-- </div> -->
+  
 </body>
 </html>
 
