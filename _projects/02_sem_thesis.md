@@ -10,8 +10,9 @@ prof: "Prof. Mirko Meboldt"
 attachments:
   - link: "/attachments/Semester_Thesis.pdf"
     text: "Read Thesis"
-  - link: "/attachments/Final_Presentation.ppt"
-    text: "View Presentation"
+  - link: "/attachments/Final_Presentation.pdf"
+    text: "View Slides"
+  
 ---
 <img src="{{page.image}}" alt="{{page.title}}" width="50%">
 <!-- ![{{page.title}}]({{page.image}}) -->
@@ -30,88 +31,7 @@ The pipeline incorporates Kalman filtering and outlier detection to enhance temp
 
 Through this project, I gained hands-on experience in creating a digital twin of the surgical environment. I experimented with various validation strategies and gained insight into the challenges of accurately matching markers prior to triangulation.
 
-**Media:**
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .media-section {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-        .grid-item img, .grid-item video {
-            width: 100%;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-    <section class="media-section">
-        <div class="grid-container">
-            <div class="grid-item">
-              <a href="/images/img_1.jpg" target="_blank">
-                <img src="/images/img_1.jpg" alt="Project Image 1">
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/img_2.jpg" target="_blank">
-                <img src="/images/img_2.jpg" alt="Project Image 2">
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/img_3.jpg" target="_blank">
-                <img src="/images/img_3.jpg" alt="Project Image 3">
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/img_4.jpg" target="_blank">
-                <img src="/images/img_4.jpg" alt="Project Image 4">
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/img_5.jpg" target="_blank">
-                <img src="/images/img_5.jpg" alt="Project Image 5">
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/video_1.mp4" target="_blank">
-                <video controls>
-                  <source src="/images/video_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-            </div>
-            <div class="grid-item">
-              <a href="/images/video_2.mp4" target="_blank">
-                <video controls>
-                  <source src="/images/video_2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-            </div>
-
-        </div>
-    </section>
-</body>
-
 **Attachments:**
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
@@ -124,6 +44,15 @@ Through this project, I gained hands-on experience in creating a digital twin of
     </div>
     </a>
   {% endfor %}
+  <a href="/attachments/Final_Presentation.mp4" target="_blank">
+      <div class="pdf-thumbnail-wrapper">
+        <video width="200" controls>
+          <source src="/attachments/Final_Presentation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        Final Presentation
+      </div>
+    </a>
 </div>
 
 <script>

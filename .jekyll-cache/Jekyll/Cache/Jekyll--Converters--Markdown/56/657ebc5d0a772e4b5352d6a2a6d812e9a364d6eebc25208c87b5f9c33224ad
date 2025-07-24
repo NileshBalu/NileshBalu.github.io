@@ -1,0 +1,75 @@
+I"$<p><img src="/images/blob_3d.png" alt="Surgeon Hand Pose Tracking for a Digital Surgery Platform" width="50%" />
+<!-- ![Surgeon Hand Pose Tracking for a Digital Surgery Platform](/images/blob_3d.png) --></p>
+
+<p><strong>Aim:</strong></p>
+
+<p>This thesis aims to develop a real-time hand pose estimation pipeline for digital surgical platforms by accurately detecting and reconstructing a surgeon’s hand movements in 3D.</p>
+
+<p><strong>Summary:</strong></p>
+
+<p>The system uses a hand pose estimation model (WiLoR) to generate 2D and 2.5D keypoints, which are then triangulated into anatomically plausible 3D poses. It is designed to run on a compact embedded device (ZED Box with NVIDIA Jetson Orin), enabling real-time inference at 8 FPS.</p>
+
+<p>The pipeline incorporates Kalman filtering and outlier detection to enhance temporal stability and is validated using multiple techniques, with blob-based tracking showing the best accuracy (≈10 mm RMSE). While effective in controlled environments, challenges remain in handling occlusions and complex gestures in real surgeries. Future work includes training on domain-specific data, integrating tool constraints, and adopting more advanced validation methods to improve robustness and applicability in real-world surgical settings.</p>
+
+<p><strong>Takeaways:</strong></p>
+
+<p>Through this project, I gained hands-on experience in creating a digital twin of the surgical environment. I experimented with various validation strategies and gained insight into the challenges of accurately matching markers prior to triangulation.</p>
+
+<p><strong>Attachments:</strong></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<div class="pdf-thumbnail-container">
+  
+    <a href="/attachments/Semester_Thesis.pdf" target="_blank">
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/Semester_Thesis.pdf"></canvas>
+      Read Thesis
+    </div>
+    </a>
+  
+    <a href="/attachments/Final_Presentation.pdf" target="_blank">
+    <div class="pdf-thumbnail-wrapper">
+      <canvas class="pdf-thumbnail" data-url="/attachments/Final_Presentation.pdf"></canvas>
+      View Slides
+    </div>
+    </a>
+  
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pdf-thumbnail").forEach((canvas) => {
+      const url = canvas.getAttribute("data-url");
+
+      pdfjsLib.getDocument(url).promise.then(pdf => {
+        return pdf.getPage(1);
+      }).then(page => {
+        const desiredWidth = 200; // Adjust this to control thumbnail width
+        const viewport = page.getViewport({ scale: 1 }); // Default scale (1) to get original width
+
+        const scale = desiredWidth / viewport.width; // Calculate scale based on desired width
+        const scaledViewport = page.getViewport({ scale });
+
+        const context = canvas.getContext("2d");
+
+        // Set canvas size to match the scaled page
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: scaledViewport
+        };
+
+        return page.render(renderContext).promise;
+      });
+
+      canvas.addEventListener("click", () => {
+        window.open(url, "_blank");
+      });
+    });
+  });
+</script>
+
+:ET
