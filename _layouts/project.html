@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<article class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p class="project-meta">
+    {{ page.type }} &middot; {{ page.location }} &middot; {{ page.date_range }}
+    {% if page.prof %}<br>Supervisor: {{ page.prof }}{% endif %}
+  </p>
+
+  <img class="project-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+
+  {{ content }}
+
+  {% assign pubs = site.data.publications | where: "project", page.slug %}
+  {% if pubs.size > 0 %}
+    <h2>Publications</h2>
+    <div class="publication-list">
+      {% for pub in pubs %}{% include publication.html pub=pub %}{% endfor %}
+    </div>
+  {% endif %}
+
+  {% if page.media %}
+    <h2>Media</h2>
+    <div class="media-grid">
+      {% for item in page.media %}
+        {% if item.src contains '.mp4' %}
+          <video controls preload="metadata"{% if item.poster %} poster="{{ item.poster | relative_url }}"{% endif %}>
+            <source src="{{ item.src | relative_url }}" type="video/mp4">
+          </video>
+        {% else %}
+          <a href="{{ item.src | relative_url }}" target="_blank" rel="noopener">
+            <img src="{{ item.src | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if page.attachments %}
+    <h2>Documents</h2>
+    <div class="pdf-thumbnail-container">
+      {% for attachment in page.attachments %}
+        <a class="pdf-thumbnail-wrapper" href="{{ attachment.link | relative_url }}" target="_blank" rel="noopener">
+          <canvas class="pdf-thumbnail" data-url="{{ attachment.link | relative_url }}"></canvas>
+          <span>{{ attachment.text }}</span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script>
+      document.querySelectorAll(".pdf-thumbnail").forEach((canvas) => {
+        pdfjsLib.getDocument(canvas.dataset.url).promise
+          .then((pdf) => pdf.getPage(1))
+          .then((page) => {
+            const width = 200;
+            const viewport = page.getViewport({ scale: width / page.getViewport({ scale: 1 }).width });
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            return page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+          })
+          .catch(() => canvas.remove());
+      });
+    </script>
+  {% endif %}
+</article>

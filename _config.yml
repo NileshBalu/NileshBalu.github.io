@@ -1,42 +1,62 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
-
-# Plugins
-plugins:
-  - jekyll-gist
-  - jekyll-paginate
-
-
-
-# Permalinks
-permalink: /:categories/:title/
-
-
-# Setup
+# Site
 title:            "Nilesh Balu"
-tagline:          ""
-description:      ""
-url:              "http://nileshbalu.github.io"
-baseurl:          "/"
+tagline:          "Robotics, Dynamics & Control"
+description:      "MSc Mechanical Engineering student at ETH Zürich working on robotics, dynamics and control, with a focus on rehabilitation and medical robotics."
+url:              "https://nileshbalu.github.io"
+baseurl:          ""
+lang:             en
+image:            /images/profile.jpg
 
 author:
-  name:           'Nilesh Balu'
-  url:            
+  name:           "Nilesh Balu"
+  email:          "nileshbalu892@gmail.com"
+  linkedin:       "nileshbalu2002"
+  github:         "NileshBalu"
 
-paginate:         5
+social:
+  name:           "Nilesh Balu"
+  links:
+    - https://www.linkedin.com/in/nileshbalu2002
+    - https://github.com/NileshBalu
+
+# Build
+markdown:         kramdown
+highlighter:      rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   projects:
     output:       true
     permalink:    /projects/:path/
-
   coursework:
     output:       true
     permalink:    /coursework/:path/
 
-# Custom vars
-version:          2.1.0
+defaults:
+  - scope:
+      type:       projects
+    values:
+      layout:     project
+  - scope:
+      type:       coursework
+    values:
+      layout:     project
 
-github:
-  repo:           https://github.com/poole/hyde
+exclude:
+  - README.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  # Leftovers from the old hand-built site / Hyde theme; safe to delete
+  - docs
+  - _posts
+  - atom.xml
+  - CNAME
+  - images/profile.png
+  - attachments/Final_Presentation.mp4

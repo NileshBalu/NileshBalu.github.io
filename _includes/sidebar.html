@@ -1,50 +1,50 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <img src="/images/profile.png" alt="Nilesh Balu" width="200" style="border-radius: 5%;">
+      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of {{ site.author.name }}" class="sidebar-photo" width="200" height="267">
       <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
-        </a>
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
+      <p class="lead">{{ site.tagline }}</p>
     </div>
 
     <nav class="sidebar-nav">
       <ul class="sidebar-nav-list">
         <li class="sidebar-nav-item">
-          <a href="{{ site.baseurl }}#home" id="home-link" class="nav-link">Home</a>
+          <a href="{{ '/#home' | relative_url }}" class="nav-link">Home</a>
         </li>
         <li class="sidebar-nav-item">
-          <a href="{{ site.baseurl }}#projects" id="projects-link" class="nav-link">Projects</a>
+          <a href="{{ '/#publications' | relative_url }}" class="nav-link">Publications</a>
         </li>
         <li class="sidebar-nav-item">
-          <a href="/attachments/CV.pdf" target="_blank">Curriculum Vitae</a>
+          <a href="{{ '/#projects' | relative_url }}" class="nav-link">Projects</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="{{ '/attachments/CV.pdf' | relative_url }}" target="_blank" rel="noopener">Curriculum Vitae</a>
         </li>
       </ul>
     </nav>
 
-     <!-- Social Links Section -->
-     <div class="sidebar-social">
+    <div class="sidebar-social">
       <ul class="sidebar-social-list">
         <li>
-          <a href="https://www.linkedin.com/in/nileshbalu2002" target="_blank">
-            <img src="/images/linkedin.png" alt="LinkedIn" width="30">
+          <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="{{ '/images/linkedin.png' | relative_url }}" alt="LinkedIn" width="30" height="30">
           </a>
         </li>
         <li>
-          <a href="https://github.com/NileshBalu" target="_blank">
-            <img src="/images/github.png" alt="GitHub" width="30">
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="{{ '/images/github.png' | relative_url }}" alt="GitHub" width="30" height="30">
           </a>
         </li>
         <li>
-          <a href="mailto:nileshbalu892[at]gmail[dot]com" target="_blank">
-            <img src="/images/email.png" alt="EMail" width="30">
+          <a href="mailto:{{ site.author.email }}" aria-label="Email">
+            <img src="{{ '/images/email.png' | relative_url }}" alt="Email" width="30" height="30">
           </a>
         </li>
       </ul>
     </div>
 
-    <p>&copy; Last Updated: 20th Feb 2025</p>
+    <p class="sidebar-footer">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; Updated {{ site.time | date: '%B %Y' }}</p>
   </div>
 </div>

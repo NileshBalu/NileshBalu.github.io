@@ -1,91 +1,77 @@
 ---
 layout: default
-title: Home
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ page.title }} | Nilesh Balu</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+<section id="home">
+  <header class="intro">
+    <h1>Nilesh Balu</h1>
+    <h2>Master's Student in Mechanical Engineering at ETH Zürich</h2>
+    <p>Robotics, Systems and Controls | Rehabilitation and Medical Robotics</p>
+  </header>
 
-  <script defer src="script.js"></script>
+  <div class="about">
+    <h3>About Me</h3>
+    <p>I am a Master’s student in the Mechanical Engineering Department at <em>Eidgenössische Technische Hochschule (ETH) Zürich</em>, passionate about robotics. I am driven by challenging research questions in this field and the opportunity to make a positive impact on people’s lives.</p>
+    <p>I recently completed a research internship at the <em>Max Planck Institute for Intelligent Systems</em>, where I focused on the dynamical modeling and characterization of haptic actuators. Currently, I am a Student Assistant for the RobotX Robotics Summer School at ETH Zürich. In this role, I am supporting the transition of the program's primary hardware platform from wheeled robots to quadrupeds.</p>
+    <p>I completed my Bachelor’s degree at the <em>Indian Institute of Technology (IIT) Madras</em>, where I graduated at the top of my class and won the <em>Best Thesis Award</em>. During my time there, I developed a speed-control submodule, an autonomous system using ROS, and a prototype of a compliant hand exoskeleton.</p>
+  </div>
 
-</head>
-<body>
+  <div class="education">
+    <h3>Education</h3>
+    <ul>
+      <li><strong>ETH Zürich</strong> — Master of Science ETH in Mechanical Engineering, 2024–Present</li>
+      <li><strong>IIT Madras</strong> — Bachelor of Technology (Honors) in Mechanical Engineering, 2020–2024</li>
+    </ul>
+  </div>
 
-  <!-- Home Section -->
-  <section id="home">
-    <header>
-      <h1>Nilesh Balu</h1>
-      <h2>Master's Student in Mechanical Engineering at ETH Zurich</h2>
-      <p>Robotics, Systems and Controls | Rehabilitation and Medical Robotics</p>
-    </header>
+  <div class="research">
+    <h3>Research Interests</h3>
+    <ul>
+      <li>Dynamics and Control</li>
+      <li>Robotics for Rehabilitation and Assistive Technology</li>
+      <li>Medical Robotics (Perception, System Control, and Modeling)</li>
+    </ul>
+  </div>
+</section>
 
-    <div class="about">
-      <h3>About Me</h3>
-      <p> I am a Master’s student in the Mechanical Engineering Department at <em>Eidgenössische Technische Hochschule (ETH) Zürich</em>, passionate about robotics. I am driven by challenging research questions in this field and the opportunity to make a positive impact on people’s lives.</p>
-      <p> Currently, I am working with the <em>Product Development Group Zurich</em>, to develop a digital twin of an operating room to enable seamless evaluation of surgeon training. In this project, I explore <em>human pose estimation</em> and <em>state estimation</em>. Additionally, I am a student assistant on the organizing team of the <em>Robotics Summer School</em>, conducted by <em>RobotX</em> at ETH Zurich.</p>
-      <p> I completed my Bachelor’s degree at the <em>Indian Institute of Technology (IIT) Madras</em>, where I graduated at the top of my class and won the <em>Best Thesis Award</em>. During my time there, I developed a speed-control submodule, an autonomous system using ROS, and a prototype of a compliant hand exoskeleton.</p>
-    </div>
+<section id="publications">
+  <header>
+    <h2>Publications</h2>
+  </header>
 
-    <div class="education">
-      <h3>Education</h3>
-      <ul>
-        <li><strong>ETH Zürich</strong> — Master of Science ETH in Mechanical Engineering, 2024–Present</li>
-        <li><strong>IIT Madras</strong> — Bachelor of Technology (Honors) in Mechanical Engineering, 2020–2024</li>
-      </ul>
-    </div>
+  <div class="publication-list">
+    {% for pub in site.data.publications %}{% include publication.html pub=pub %}{% endfor %}
+  </div>
+</section>
 
-    <div class="research">
-      <h3>Research Interests</h3>
-      <ul>
-        <li>Robotics for Rehabilitation and Assistive Technology</li>
-        <li>Medical Robotics (Perception, System Control, and Modeling)</li>
-      </ul>
-    </div>
-  </section>
+<section id="projects">
+  <header>
+    <h2>Projects</h2>
+    <p>Select a project for details, reports and media.</p>
+  </header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <header>
-      <h2>Projects</h2>
-      <p>These are all the projects I have worked on. <b>Click the project tile for more details.</b></p>
-    </header>
+  <h3>Research &amp; Industry</h3>
+  <div class="projects-list">
+    {% for project in site.projects %}
+    <a class="project-item" href="{{ project.url | relative_url }}">
+      <h4>{{ project.type }}: {{ project.title }}</h4>
+      <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title }}" loading="lazy">
+      <p>{{ project.description }}</p>
+      {% if project.prof %}<strong>{{ project.prof }}</strong><br>{% endif %}
+      <i>{{ project.location }} &middot; {{ project.date_range }}</i>
+    </a>
+    {% endfor %}
+  </div>
 
-    <h3>Research/Industry</h3>
-    <div class="projects-list">
-      {% for project in site.projects %}
-      <a href="{{ project.url }}">
-        <div class="project-item">
-          <h4>{{ project.type }} :  {{ project.title }}</h4>    
-          <img src="{{ project.image }}" alt="{{ project.title }}" width="30%">
-          <p>{{ project.description }}</p>
-          <strong>{{ project.prof }}</strong><br>
-          <i>{{ project.location }}; <u>{{ project.Date }}</u></i>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-
-    <h3>Coursework</h3>
-    <div class="coursework-list">
-      {% for coursework in site.coursework %}
-      <a href="{{ coursework.url }}">
-        <div class="coursework-item">
-          <h4>{{ coursework.title }}</h4>
-          <img src="{{ coursework.image }}" alt="{{ coursework.title }}" width="30%">
-          <p>{{ coursework.description }}</p>
-          <i>{{ coursework.type }}, {{ coursework.location }}, <u>{{ coursework.Date }}</u></i>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </section>
-  <!-- </div> -->
-  
-</body>
-</html>
+  <h3>Coursework</h3>
+  <div class="projects-list">
+    {% for coursework in site.coursework %}
+    <a class="project-item" href="{{ coursework.url | relative_url }}">
+      <h4>{{ coursework.title }}</h4>
+      <img src="{{ coursework.image | relative_url }}" alt="{{ coursework.image_alt | default: coursework.title }}" loading="lazy">
+      <p>{{ coursework.description }}</p>
+      <i>{{ coursework.type }} &middot; {{ coursework.location }} &middot; {{ coursework.date_range }}</i>
+    </a>
+    {% endfor %}
+  </div>
+</section>

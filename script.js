@@ -1,20 +1,19 @@
-const navLinks = document.querySelectorAll('.sidebar-nav-item a');
-const sections = document.querySelectorAll('section');
+// Highlight the sidebar link for the section currently in view (home page only).
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.sidebar-nav-item a.nav-link');
 
-let currentSection = 'home';
-document.getElementById('home-link').classList.add('active');
-
-window.addEventListener('scroll', () => {
-    sections.forEach((section) => {
-        if (window.scrollY >= section.offsetTop - 50) {
-            currentSection = section.id;
-        }
-    });
-
-    navLinks.forEach((link) => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(currentSection)) {
-            link.classList.add('active');
-        }
-    });
-});
+if (sections.length) {
+    const updateActive = () => {
+        let current = sections[0].id;
+        sections.forEach((section) => {
+            if (window.scrollY >= section.offsetTop - 50) {
+                current = section.id;
+            }
+        });
+        navLinks.forEach((link) => {
+            link.classList.toggle('active', link.hash === '#' + current);
+        });
+    };
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+}
