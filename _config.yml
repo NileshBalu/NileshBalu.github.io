@@ -1,7 +1,7 @@
 # Site
 title:            "Nilesh Balu"
 tagline:          "Robotics, Dynamics & Control"
-description:      "MSc Mechanical Engineering student at ETH Zürich working on robotics, dynamics and control, with a focus on rehabilitation and medical robotics."
+description:      "MSc Mechanical Engineering student at ETH Zürich working on dynamics and control for learning-based systems, with a focus on safety guarantees for safety-critical robotics."
 url:              "https://nileshbalu.github.io"
 baseurl:          ""
 lang:             en

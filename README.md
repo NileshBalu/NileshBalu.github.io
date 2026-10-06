@@ -1,6 +1,6 @@
 # nileshbalu.github.io
 
-Personal portfolio of **Nilesh Balu**, MSc Mechanical Engineering student at ETH Zürich: robotics, dynamics and control, and rehabilitation and medical robotics.
+Personal portfolio of **Nilesh Balu**, MSc Mechanical Engineering student at ETH Zürich: dynamics and control for learning-based systems, haptic feedback, and safety guarantees for safety-critical robotics.
 
 **Live site:** <https://nileshbalu.github.io>
 
