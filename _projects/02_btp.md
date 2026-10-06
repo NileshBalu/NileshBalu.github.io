@@ -1,4 +1,5 @@
 ---
+order: 4
 title: "A Wearable Hand Assistive Device"
 image: "/images/glove_1.png"
 image_alt: "Tendon-driven assistive glove prototype on a 3D-printed hand"

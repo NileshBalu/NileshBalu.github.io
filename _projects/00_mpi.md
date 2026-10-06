@@ -1,4 +1,5 @@
 ---
+order: 2
 title: "Dynamical Modeling and System Identification of Haptic Actuators"
 image: "/images/spring_mass_damper.png"
 image_alt: "Lumped-parameter spring–mass–damper model of a haptic actuator"

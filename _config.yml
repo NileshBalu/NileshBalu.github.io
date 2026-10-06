@@ -30,6 +30,7 @@ plugins:
 collections:
   projects:
     output:       true
+    sort_by:      order
     permalink:    /projects/:path/
   coursework:
     output:       true

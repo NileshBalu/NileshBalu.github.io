@@ -1,4 +1,5 @@
 ---
+order: 5
 title: "Autonomous Electric Wheelchair for Children with Physical Challenges"
 image: "/images/wheelchair.png"
 image_alt: "Electric wheelchair fitted with sensors for autonomous navigation"

@@ -12,7 +12,7 @@ layout: default
   <div class="about">
     <h3>About Me</h3>
     <p>I am a Master’s student in the Mechanical Engineering Department at <em>Eidgenössische Technische Hochschule (ETH) Zürich</em>, passionate about robotics. I am driven by challenging research questions in this field and the opportunity to make a positive impact on people’s lives.</p>
-    <p>I recently completed a research internship at the <em>Max Planck Institute for Intelligent Systems</em>, where I focused on the dynamical modeling and characterization of haptic actuators. Currently, I am a Student Assistant for the RobotX Robotics Summer School at ETH Zürich. In this role, I am supporting the transition of the program's primary hardware platform from wheeled robots to quadrupeds.</p>
+    <p>I am currently working on my <em>Master’s thesis</em> with Prof. Lars Lindemann at ETH Zürich, developing a safe <em>Flow Matching</em> framework for robot trajectory generation inspired by <em>Control Barrier Functions</em>. Before this, I completed a research internship at the <em>Max Planck Institute for Intelligent Systems</em>, where I focused on the dynamical modeling and characterization of haptic actuators. Currently, I am a Student Assistant for the RobotX Robotics Summer School at ETH Zürich. In this role, I am supporting the transition of the program's primary hardware platform from wheeled robots to quadrupeds.</p>
     <p>I completed my Bachelor’s degree at the <em>Indian Institute of Technology (IIT) Madras</em>, where I graduated at the top of my class and won the <em>Best Thesis Award</em>. During my time there, I developed a speed-control submodule, an autonomous system using ROS, and a prototype of a compliant hand exoskeleton.</p>
   </div>
 
@@ -55,7 +55,7 @@ layout: default
     {% for project in site.projects %}
     <a class="project-item" href="{{ project.url | relative_url }}">
       <h4>{{ project.type }}: {{ project.title }}</h4>
-      <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title }}" loading="lazy">
+      {% if project.image %}<img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title }}" loading="lazy">{% endif %}
       <p>{{ project.description }}</p>
       {% if project.prof %}<strong>{{ project.prof }}</strong><br>{% endif %}
       <i>{{ project.location }} &middot; {{ project.date_range }}</i>
@@ -68,7 +68,7 @@ layout: default
     {% for coursework in site.coursework %}
     <a class="project-item" href="{{ coursework.url | relative_url }}">
       <h4>{{ coursework.title }}</h4>
-      <img src="{{ coursework.image | relative_url }}" alt="{{ coursework.image_alt | default: coursework.title }}" loading="lazy">
+      {% if coursework.image %}<img src="{{ coursework.image | relative_url }}" alt="{{ coursework.image_alt | default: coursework.title }}" loading="lazy">{% endif %}
       <p>{{ coursework.description }}</p>
       <i>{{ coursework.type }} &middot; {{ coursework.location }} &middot; {{ coursework.date_range }}</i>
     </a>

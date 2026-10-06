@@ -9,7 +9,9 @@ layout: default
     {% if page.prof %}<br>Supervisor: {{ page.prof }}{% endif %}
   </p>
 
+  {% if page.image %}
   <img class="project-hero" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+  {% endif %}
 
   {{ content }}
 

@@ -1,4 +1,5 @@
 ---
+order: 3
 title: "Surgeon Hand Pose Tracking for a Digital Surgery Platform"
 image: "/images/blob_3d.png"
 image_alt: "3D reconstruction of tracked hand keypoints"

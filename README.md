@@ -17,12 +17,13 @@ Personal portfolio of **Nilesh Balu**, MSc Mechanical Engineering student at ETH
 
 ### Adding a project
 
-Create `_projects/NN_name.md` (files are listed in filename order):
+Create `_projects/NN_name.md`. Projects are listed by their `order` value (1 = top), so bump the others when inserting one:
 
 ```yaml
 ---
+order: 1
 title: "Project title"
-image: "/images/thumbnail.png"
+image: "/images/thumbnail.png"   # optional
 image_alt: "Short description of the image"
 description: "One or two sentences shown on the home page tile."
 location: "Institution, Country"
