@@ -53,7 +53,8 @@ layout: default
 
   <h3>Research &amp; Industry</h3>
   <div class="projects-list">
-    {% for project in site.projects %}
+    {% assign projects = site.projects | sort: "order" %}
+    {% for project in projects %}
     <a class="project-item" href="{{ project.url | relative_url }}">
       <h4>{{ project.type }}: {{ project.title }}</h4>
       {% if project.image %}<img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title }}" loading="lazy">{% endif %}
