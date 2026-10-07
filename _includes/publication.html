@@ -1,0 +1,7 @@
+<article class="pub-item">
+  <div class="pub-title">
+    {% if include.pub.link %}<a href="{{ include.pub.link }}" target="_blank" rel="noopener">{{ include.pub.title }}</a>{% else %}{{ include.pub.title }}{% endif %}
+  </div>
+  <div class="pub-authors">{{ include.pub.authors }}</div>
+  <div class="pub-venue">{{ include.pub.venue }}</div>
+</article>

@@ -1,3 +1,5 @@
+> The MIT license below applies to the Hyde theme code (layouts, includes and CSS). All other content, including text, images, videos, reports and the CV, is © Nilesh Balu. All rights reserved.
+
 # Released under MIT License
 
 Copyright (c) 2013 Mark Otto.

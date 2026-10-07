@@ -17,7 +17,7 @@
 html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   html {
     font-size: 20px;
   }
@@ -34,7 +34,7 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -78,7 +78,7 @@ a.sidebar-nav-item:focus {
 }
 
 
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -87,14 +87,26 @@ a.sidebar-nav-item:focus {
   }
 }
 
+.sidebar-photo {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.sidebar-footer {
+  font-size: .8rem;
+}
+
 /* Container */
 .content {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
   .content {
-    max-width: 38rem;
+    max-width: 48rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
@@ -106,110 +118,125 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* Reverse layout */
-@media (min-width: 48em) {
-  .layout-reverse .sidebar {
-    left: auto;
-    right: 0;
-  }
-  .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
-  }
+section[id] {
+  scroll-margin-top: 1rem;
 }
-@media (min-width: 64em) {
-  .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
-  }
+section + section {
+  margin-top: 3rem;
 }
 
-/* Themes */
-.theme-base-08 .sidebar { background-color: #ac4142; }
-.theme-base-08 .content a, .theme-base-08 .related-posts li a:hover { color: #ac4142; }
-.theme-base-09 .sidebar { background-color: #d28445; }
-.theme-base-09 .content a, .theme-base-09 .related-posts li a:hover { color: #d28445; }
-.theme-base-0a .sidebar { background-color: #f4bf75; }
-.theme-base-0a .content a, .theme-base-0a .related-posts li a:hover { color: #f4bf75; }
-.theme-base-0b .sidebar { background-color: #90a959; }
-.theme-base-0b .content a, .theme-base-0b .related-posts li a:hover { color: #90a959; }
-.theme-base-0c .sidebar { background-color: #75b5aa; }
-.theme-base-0c .content a, .theme-base-0c .related-posts li a:hover { color: #75b5aa; }
-.theme-base-0d .sidebar { background-color: #6a9fb5; }
-.theme-base-0d .content a, .theme-base-0d .related-posts li a:hover { color: #6a9fb5; }
-.theme-base-0e .sidebar { background-color: #aa759f; }
-.theme-base-0e .content a, .theme-base-0e .related-posts li a:hover { color: #aa759f; }
-.theme-base-0f .sidebar { background-color: #8f5536; }
-.theme-base-0f .content a, .theme-base-0f .related-posts li a:hover { color: #8f5536; }
-
-/* Project & Coursework Styling */
-.project-item, .coursework-item {
+/* Project & coursework tiles */
+.project-item {
+  display: block;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   color: #333;
 }
-.project-item:hover, .coursework-item:hover {
+.project-item:hover,
+.project-item:focus {
+  text-decoration: none;
   transform: scale(1.02);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+.project-item h4 {
+  margin-top: 0;
+}
+.project-item img {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin-bottom: .75rem;
+}
 
-/* PDF Thumbnails */
+/* Project pages */
+.project-meta {
+  color: #777;
+}
+.project-hero {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+.page h2 {
+  margin-top: 2rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+.media-grid img,
+.media-grid video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Publications */
+.pub-item {
+  margin-bottom: 1rem;
+}
+.pub-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.pub-venue {
+  font-style: italic;
+  color: #666;
+}
+
+/* PDF thumbnails */
 .pdf-thumbnail-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
   align-items: flex-start;
 }
-
 .pdf-thumbnail-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.2s ease;
 }
-
 .pdf-thumbnail-wrapper:hover {
   transform: scale(1.02);
   text-decoration: none;
 }
+.pdf-thumbnail {
+  border: 1px solid #ddd;
+  margin-bottom: .5rem;
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .pdf-thumbnail-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-item img, .coursework-item img {
+@media (max-width: 48rem) {
+  .project-item img,
+  .project-hero {
     width: 100%;
   }
+  .pdf-thumbnail-container {
+    justify-content: center;
+  }
 }
 
-/* Ensure that the list items appear in a horizontal line */
+/* Social links */
 .sidebar-social {
-  display: flex; /* Use Flexbox */
-  margin-top: 40px; /* Optional: Add space above the social icons */
+  display: flex;
+  margin-top: 40px;
 }
-
 .sidebar-social-list {
   list-style-type: none;
-  padding: 0 40px; /* Optional: Add space around the icons */
-  display: flex; /* This will arrange the items horizontally */
-  gap: 15px; /* Space between icons */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
-
-.sidebar-social-list li {
-  display: inline-block; /* Ensures that the list items are inline */
-}
-
-.sidebar-social-list a {
-  display: inline-block; /* Make sure the links behave like inline-blocks */
-}
-
 .sidebar-social-list a:hover {
   opacity: 0.7;
 }
